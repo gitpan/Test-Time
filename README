@@ -1,0 +1,23 @@
+NAME
+    Test::Time - Override time() and sleep() core function for tests.
+
+SYNOPSIS
+      use Test::Time; # just use
+
+      time(); # fixed time
+
+      sleep 1; # increment internal time (return immediately)
+      time(); # incremented
+
+DESCRIPTION
+    Test::Time is for tests around time. You just use this module and your
+    tests are all "time safe".
+
+AUTHOR
+    cho45 <cho45@lowreal.net>
+
+SEE ALSO
+LICENSE
+    This library is free software; you can redistribute it and/or modify it
+    under the same terms as Perl itself.
+
