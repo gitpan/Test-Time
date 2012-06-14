@@ -1,5 +1,5 @@
 ---
-abstract: 'Override time() and sleep() core function for tests.'
+abstract: 'Overrides the time() and sleep() core functions for testing'
 author:
   - 'cho45 <cho45@lowreal.net>'
 build_requires:
@@ -24,4 +24,4 @@ requires:
 resources:
   license: http://dev.perl.org/licenses/
   repository: git://github.com/cho45/Test-Time.git
-version: 0.03
+version: 0.04
