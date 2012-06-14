@@ -4,15 +4,16 @@ package Test::Name::FromLine;
 use strict;
 use warnings;
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 use Test::Builder;
 use File::Slurp;
 
+our %filecache;
+
 no warnings 'redefine';
 my $ORIGINAL_ok = \&Test::Builder::ok;
 *Test::Builder::ok = sub {
-	my %filecache;
 	$_[2] ||= do {
 		my ($package, $filename, $line) = caller($Test::Builder::Level);
 		my $file = $filecache{$filename} ||= [ read_file($filename) ];
@@ -30,4 +31,4 @@ __END__
 
 =encoding utf8
 
-#line 64
+#line 65
